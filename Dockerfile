@@ -1,6 +1,6 @@
 FROM php:7.2.22-fpm-buster
 COPY composer-installer.sh  /opt/
-RUN apt-get update && apt-get install -y libjpeg62-turbo-dev libfreetype6-dev libpng-dev libzip-dev net-tools \
+RUN apt-get update && apt-get install -y libjpeg62-turbo-dev libfreetype6-dev libpng-dev libzip-dev net-tools zip \
   && sh /opt/composer-installer.sh \
   && docker-php-ext-configure gd \
     --with-gd \
